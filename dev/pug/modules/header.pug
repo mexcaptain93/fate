@@ -1,13 +1,39 @@
-header.header
+header.header.header_menu-mob-opened
     .container
-        .header__burger
-        .header__logo
-            a(href='#') 
-                img(src='static/img/svg/logo.svg')
-        .header__menu.menu
-            ul.menu__list
-                li.menu__item
+        .header__top
+            .header__burger
+            .header__logo
+                a(href='#') 
+                    .header__logo-elem
+            .header__menu.menu
+                ul.menu__list
+                    li.menu__item
+                        a(href='#') Психология
+                    li.menu__item
+                        a(href='#') Психиатрия
+            .header__search-btn
+            
+        
+
+        .header__search.search
+                .search__form
+                    .search__input
+                        input.input(type="text" placeholder="Поиск...")
+                    .search__btn
+                        button.btn Найти
+
+        .header__mobile-menu.mobile-menu
+            .mobile-menu__heading
+                span Заголовок меню
+            ul.mobile-menu__list
+                li.mobile-menu__item
                     a(href='#') Психология
-                li.menu__item
+                li.mobile-menu__item
                     a(href='#') Психиатрия
-        .header__search-btn
+            .mobile-menu__heading
+                span Заголовок меню
+            ul.mobile-menu__list
+                li.mobile-menu__item
+                    a(href='#') Психология 2 
+                li.mobile-menu__item
+                    a(href='#') Психиатрия 2
