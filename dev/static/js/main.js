@@ -13,7 +13,8 @@ function header() {
         togglerSearch = $('.js-mobile-search-toggler'),
         menu = $('.js-mobile-menu'),
         level1 = '.mobile-menu__item',
-        level2 = '.submenu';
+        level2 = '.submenu',
+        activeMenu= 'mobile-menu__item_active';
 
 
     // Поиск
@@ -35,7 +36,8 @@ function header() {
 
     menu.find(level1).on('click', function (e) {
         $(level2).hide();
-        $(this).find(level2).show();
+        $(level1).removeClass(activeMenu)
+        $(this).toggleClass(activeMenu).find(level2).show();
     })
 
 }

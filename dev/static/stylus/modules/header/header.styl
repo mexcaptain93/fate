@@ -135,10 +135,34 @@
                     @media $tablet
                         border-bottom: none
 
+                &_hassub
+
+                    @media $tablet
+                        position: relative
+
+                    &::after
+                        @media $tablet
+                            content: ''
+                            display: block
+                            position: absolute
+                            width: 6px
+                            height: 10px
+                            background-image: url('../img/svg/menu-arrow.svg')
+                            background-repeat: no-repeat
+                            background-size: contain
+                            right: 23px
+                            top: 50%
+                            transition: .3s transform ease
+
                 &_active, &:hover
 
                     @media $tablet
                         background-color: $blue_light
+
+                    &::after
+
+                        @media $tablet
+                            transform: rotate(180deg)
 
             &__submenu
                 margin-bottom 8px
