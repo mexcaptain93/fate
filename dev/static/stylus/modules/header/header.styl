@@ -2,8 +2,9 @@
     border-bottom: 1px solid $gray
     min-height: 71px
 
-    @media $tablet
+    @media $desktop
         border-bottom: none
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
     .container 
         
@@ -17,6 +18,11 @@
             align-items center
             height: 71px
 
+            @media $desktop
+                justify-content: center
+                border-bottom: 1px solid $gray
+
+
     &__burger
         background-repeat: no-repeat
         background-image: url('../img/svg/burger.svg')
@@ -29,9 +35,15 @@
             width: 40px
             height: 40px
 
+        @media $desktop
+            display: none
+
     &__logo
         flex-grow: 1
         text-align: center
+
+        @media $desktop
+            flex-grow: 0
 
         a
             display: inline-block
@@ -59,16 +71,49 @@
         height: 30px
         cursor pointer
 
-        &_active
-            background-image: url('../img/svg/search-blue.svg')
-
 
         @media $tablet
             width: 40px
             height: 40px
 
+    &__search-block
+
+        @media $desktop
+            height: calc(100% + 1px)
+            display: flex
+            flex-direction: column
+            justify-content: center
+            padding: 0 22px
+            border-left: 1px solid transparent
+            border-right: 1px solid transparent
+            border-bottom: 1px solid transparent
+
+        &_active
+
+            @media $desktop
+                border-color: $gray4
+                border-bottom-color: $white
+
+            .header__search-btn
+                background-image: url('../img/svg/search-blue.svg')
+
+
+
     &__menu
         display: none
+
+        @media $desktop
+            display: block
+            padding-left: 29px
+            padding-right: 16px
+
+        .menu
+
+            &__submenu
+                display: none
+
+            &__list
+                display: flex
 
     &__search
         padding-bottom 24px
@@ -236,6 +281,7 @@
 
         @media $tablet
             height: auto
+            border-bottom: none
 
         
         .header

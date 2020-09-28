@@ -10,7 +10,7 @@ function header() {
         header = $('.js-header'),
         headerMenuClass = 'header_menu-mob-opened',
         search = $('.js-mobile-search'),
-        togglerSearch = $('.js-mobile-search-toggler'),
+        togglerSearch = $('.js-search-toggler'),
         menu = $('.js-mobile-menu'),
         level1 = '.mobile-menu__item',
         level2 = '.submenu',
@@ -21,7 +21,7 @@ function header() {
     togglerSearch.on('click', function (e) {
         e.preventDefault();
         search.toggle();
-        togglerSearch.toggleClass('header__search-btn_active');
+        togglerSearch.toggleClass('header__search-block_active');
         header.removeClass(headerMenuClass);
     });
 
