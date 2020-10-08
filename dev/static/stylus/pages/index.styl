@@ -1,0 +1,66 @@
+.index
+
+  .container
+    overflow: hidden
+
+  .articles-slider
+    padding-bottom: 35px
+    margin-bottom: 56px
+
+    .article
+      position: relative
+      box-shadow: 0 2px 12px 2px rgba(0, 0, 0, 0.35)
+      filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25))
+
+      &__name
+        position: absolute
+        bottom: 0
+        left: 0
+        background-color: alpha($white, 0.95)
+        box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.22);
+        padding: 9px 11px
+
+        font-family: $RobotoSlab
+        font-size: 16px
+        text-align: center
+
+        span
+          text-align: center
+
+      &__label
+        position: absolute
+        top: 0
+        left: 0
+        background-color: alpha($black, 0.5)
+        padding: 5px 17px
+
+        text-transform: uppercase
+        color: $white
+        font-size: 14px
+
+  .swiper
+
+
+    &-container
+      width: 100%
+      overflow: visible
+
+    &-pagination
+      top: 100%
+      padding-top: 24px
+
+      &-bullet
+        width: 12px
+        height: 12px
+        border: 1px solid $blue
+        background-color: $white
+        opacity: 1
+
+        &-active
+          background-color: $blue
+
+
+
+
+
+

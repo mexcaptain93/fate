@@ -1,6 +1,8 @@
 $(document).ready(function () {
     svg4everybody({});
     header();
+    articlesSlider();
+    articlePush();
 });
 
 
@@ -40,4 +42,34 @@ function header() {
         $(this).toggleClass(activeMenu).find(level2).show();
     })
 
+}
+
+function articlesSlider() {
+    var articlesSlider = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        initialSlide: 0,
+        coverflowEffect: {
+            rotate: 0,
+            slideShadows: false,
+            modifier: 12,
+            depth: 50,
+            stretch: 10
+        },
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+    });
+
+}
+
+function articlePush() {
+    $('.article-block__push').on('click', function (e) {
+        e.preventDefault();
+        $(this).siblings('.article-block__descr').toggleClass('opened');
+        $(this).toggleClass('opened');
+    });
 }
