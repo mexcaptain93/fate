@@ -3,9 +3,14 @@
   .container
     overflow: hidden
 
-  .articles-slider
-    padding-bottom: 35px
-    margin-bottom: 56px
+  &__slider
+    margin-bottom: 39px
+
+    .swiper
+
+      &-container
+        width: 100%
+        overflow: visible
 
     .article
       position: relative
@@ -38,29 +43,19 @@
         color: $white
         font-size: 14px
 
-  .swiper
+  &__new
+    margin-bottom: 64px
 
+  &__popular
+    margin-bottom: 64px
 
-    &-container
-      width: 100%
-      overflow: visible
+  &__useful
+    margin-bottom: 72px
 
-    &-pagination
-      top: 100%
-      padding-top: 24px
+  &__rubric
+    margin-bottom: 39px
 
-      &-bullet
-        width: 12px
-        height: 12px
-        border: 1px solid $blue
-        background-color: $white
-        opacity: 1
-
-        &-active
-          background-color: $blue
-
-
-
-
+    .swiper-pagination
+      padding-top: 32px
 
 

@@ -45,7 +45,7 @@ function header() {
 }
 
 function articlesSlider() {
-    var articlesSlider = new Swiper('.swiper-container', {
+    var indexTopSlider = new Swiper('.js-index-top-slider .swiper-container', {
         effect: 'coverflow',
         centeredSlides: true,
         slidesPerView: 'auto',
@@ -63,6 +63,16 @@ function articlesSlider() {
             type: 'bullets',
         },
     });
+
+    var indexRubricSlider = new Swiper('.js-index-rubric-slider .swiper-container', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+    });
+
+
 
 }
 

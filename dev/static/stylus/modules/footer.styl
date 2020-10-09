@@ -1,0 +1,74 @@
+.footer
+  flex 0 0 auto
+  position: relative
+  margin-top: 100px
+
+
+  &::after
+    display: block
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    height: 72px
+    z-index: 0
+    background: linear-gradient(180deg, #E1E1E1 0%, rgba(225, 225, 225, 0) 70.83%)
+
+  .container
+    position: relative
+    z-index: 1
+
+
+  &__top
+    padding: 24px 0 18px
+    margin-bottom: 14px
+
+    color: $gray2
+    font-size: 16px
+    line-height: 22px
+    letter-spacing: 0.05em
+
+  &__heading
+    font-weight: 600
+    font-size: 22px
+    line-height: 30px
+    letter-spacing: 0.05em
+
+    &::before
+      content: ''
+      display: inline-block
+      background-image: url('../img/svg/footer-arrow.svg')
+      background-repeat: no-repeat
+      background-size: contain
+      width: 16px
+      height: 16px
+      transition: .3s ease all
+      cursor: pointer
+      margin-right: 4px
+
+  &__notmob
+    display: none
+
+  &__menu
+    display: none
+
+  &__socials
+    padding-bottom: 24px
+    border-bottom: 1px solid $gray7
+    margin-bottom: 24px
+
+    .socials
+
+      &__list
+        display: flex
+        align-items: center
+        justify-content: center
+
+      &__item
+        padding: 0 5px
+
+
+  &__copyright
+    border: 1px solid $gray4
+
