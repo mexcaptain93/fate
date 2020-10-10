@@ -5,11 +5,11 @@
 
     @media $desktop
         border-bottom: none
-        min-height: 85px        
+        min-height: 85px
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
-    .container 
-        
+    .container
+
         height 100%
 
     &__top
@@ -132,7 +132,7 @@
                 font-size 18px
                 white-space: nowrap
 
-                a 
+                a
                     display block
                     width 100%
                     height 100%
@@ -155,10 +155,10 @@
                 &:last-child
                     margin-right 0
 
-                &:hover 
+                &:hover
                     color $blue
 
-                    .submenu 
+                    .submenu
                         display block
                         position absolute
                         top 100%
@@ -167,27 +167,29 @@
                         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
 
-                        &__item 
+                        &__item
                             padding 10px
                             color: $gray5
 
-                            &:hover 
+                            &:hover
                                 color $blue
 
 
     &__search
-        padding-bottom 24px
         display none
+        background-color: $white
+        padding-bottom 24px
+        padding-top: 24px
 
         @media $tablet
             padding-top: 30px
 
-        @media $desktop 
+        @media $desktop
             padding-top 16px
             padding-bottom 16px
 
-        
-        .search 
+
+        .search
 
             &__form
                 display flex
@@ -202,16 +204,16 @@
                 .input
                     border-top-right-radius: 0
                     border-bottom-right-radius: 0
-                    
+
                     text-align left
 
             &__btn
 
-                .btn 
+                .btn
                     border-top-left-radius: 0
                     border-bottom-left-radius: 0
 
-    &__mobile-menu 
+    &__mobile-menu
         display none
         padding-top 16px
         color $white
@@ -345,7 +347,7 @@
 
 
 
-    &_menu-mob-opened 
+    &_menu-mob-opened
 
         height 100vh
 
@@ -353,7 +355,7 @@
             height: auto
             border-bottom: none
 
-        
+
         .header
 
             &__top
@@ -361,7 +363,7 @@
 
                 @media $tablet
                     border-bottom: 1px solid $white
-            
+
             &__search-btn
                 background-image: url('../img/svg/search-white.svg')
 
@@ -371,7 +373,7 @@
             &__logo-elem
                 background-image: url('../img/svg/logo-white.svg')
 
-            &__menu 
+            &__menu
                 display none
 
             &__mobile-menu
@@ -386,5 +388,5 @@
                     @media $tablet
                         padding: 0
 
-        .header__menu 
+        .header__menu
             display none
