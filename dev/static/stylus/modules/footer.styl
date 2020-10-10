@@ -1,7 +1,7 @@
 .footer
   flex 0 0 auto
   position: relative
-  margin-top: 100px
+  margin-top: 44px
   padding-bottom: 50px
 
 
@@ -30,6 +30,11 @@
     line-height: 22px
     letter-spacing: 0.05em
 
+    &.opened
+
+      .footer__heading::before
+        transform: rotate(180deg)
+
   &__heading
     font-weight: 600
     font-size: 22px
@@ -53,6 +58,37 @@
 
   &__menu
     display: none
+    margin-bottom: 32px
+
+    .menu
+
+      &__item
+        margin-bottom: 24px
+
+        color: $black
+        font-weight: 600
+        font-size: 18px
+        line-height: 28px
+        letter-spacing: 0.02em
+
+        &:last-child
+          margin-bottom: 0
+
+    .submenu
+      padding-top: 16px
+
+      &__item
+        padding-bottom: 4px
+        margin-bottom: 16px
+        border-bottom: 1px solid $gray
+
+        color: $gray3
+        font-weight: normal
+        font-size: 16px
+        line-height: 22px
+
+        &:last-child
+          margin-bottom: 0
 
   &__socials
     padding-bottom: 24px

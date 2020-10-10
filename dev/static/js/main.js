@@ -3,6 +3,7 @@ $(document).ready(function () {
     header();
     articlesSlider();
     articlePush();
+    footer();
 });
 
 
@@ -82,4 +83,12 @@ function articlePush() {
         $(this).siblings('.article-block__descr').toggleClass('opened');
         $(this).toggleClass('opened');
     });
+}
+
+function footer () {
+    $('.js-footer-menu-opener').on('click', function (e) {
+        e.preventDefault();
+        $('.js-footer-menu').slideToggle('fast');
+        $(this).toggleClass('opened');
+    })
 }
