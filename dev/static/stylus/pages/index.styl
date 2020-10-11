@@ -155,6 +155,14 @@
           top: 0
           left: 0
           width: calc(50% - 16px)
+          overflow: hidden
+          max-height: 200px
+
+        &.opened
+
+          @media $tablet
+            height: auto
+            overflow: visible
 
       &__descr
 

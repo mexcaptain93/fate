@@ -97,6 +97,7 @@ function articlePush() {
     $('.article__push').on('click', function (e) {
         e.preventDefault();
         $(this).siblings('.article__descr').toggleClass('opened');
+        $(this).siblings('.article__img').toggleClass('opened');
         $(this).toggleClass('opened');
     });
 }
