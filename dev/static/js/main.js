@@ -50,6 +50,8 @@ function header() {
 function articlesSlider() {
     var indexTopSlider = new Swiper('.js-index-top-slider .swiper-container', {
         effect: 'coverflow',
+        grabCursor: true,
+        parallax: true,
         centeredSlides: true,
         slidesPerView: 'auto',
         initialSlide: 0,
@@ -64,21 +66,39 @@ function articlesSlider() {
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
+            clickable: true,
         },
         breakpoints: {
             768: {
+                slidesPerView: 'auto',
                 coverflowEffect: {
                     rotate: 0,
                     slideShadows: false,
-                    slidesPerView: 5,
                     modifier: 11,
                     depth: 50,
                     stretch: 40
                 },
             },
+            900: {
+                slidesPerView: 'auto',
+                coverflowEffect: {
+                    rotate: 0,
+                    slideShadows: false,
+                    modifier: 13,
+                    depth: 50,
+                    stretch: 55
+                },
+            },
+        },
+        init: false
 
-        }
     });
+    indexTopSlider.on('init', function() {
+        $('.js-index-top-slider .swiper-pagination').prepend('<i class="swiper-top-prev"></i>')
+        $('.js-index-top-slider .swiper-pagination').append('<i class="swiper-top-next"></i>')
+    });
+
+    indexTopSlider.init();
 
     var indexRubricSlider = new Swiper('.js-index-rubric-slider .swiper-container', {
         loop: true,
@@ -96,7 +116,6 @@ function articlesSlider() {
         }
     });
 
-    console.log(indexRubricSlider)
 
 
 
