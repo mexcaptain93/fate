@@ -44,13 +44,14 @@
 
 
 .like-h3
-    margin-bottom: 32px
-
     font-family: $RobotoSlab
     font-size: 24px
     line-height: 32px
     color: $black
     text-align: center
+
+    @media $tablet
+        font-size: 30px
 
 .like-h4
     font-family: $RobotoSlab
@@ -58,11 +59,7 @@
     line-height: 28px
 
 
-.article-block
-    margin-bottom: 5px
-
-    &:last-child
-        margin-bottom: 0
+.article
 
     &__img
         margin-bottom: 8px
@@ -112,6 +109,9 @@
 
         font-size: 14px
         color: $gray3
+
+        @media $tablet
+            font-size: 13px
 
     &__views
         margin-right: 16px
@@ -219,6 +219,10 @@
     font-size: 18px
     line-height: 28px
     color: $gray6
+
+    @media $tablet
+        min-height: 225px
+        margin-bottom: 64px
 
 
 .swiper

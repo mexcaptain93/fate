@@ -1,10 +1,14 @@
 .index
 
-  .container
+  .content .container
     overflow: hidden
 
   &__slider
     margin-bottom: 39px
+
+    @media $tablet
+      margin-bottom: 49px
+
 
     .swiper
 
@@ -12,10 +16,19 @@
         width: 100%
         overflow: visible
 
-    .article
+      &-slide-active
+
+        .article-slider__name
+          display: block
+
+    .article-slider
       position: relative
       box-shadow: 0 2px 12px 2px rgba(0, 0, 0, 0.35)
       filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25))
+
+      @media $tablet
+        width: 369px
+        margin: 0 auto
 
       &__img
 
@@ -25,6 +38,7 @@
           object-fit: contain
 
       &__name
+        display: none
         position: absolute
         bottom: 0
         left: 0
@@ -51,19 +65,161 @@
         color: $white
         font-size: 14px
 
+
+  .articles
+
+    &__list
+
+      @media $tablet
+        display: flex
+        flex-wrap: wrap
+
+    &__item
+      margin-bottom: 5px
+
+      @media $tablet
+        width: 50%
+
+      &:nth-child(odd)
+
+        @media $tablet
+          padding-right: 15px
+
+      &:nth-child(even)
+
+        @media $tablet
+          padding-left: 15px
+
+      &:last-child
+        margin-bottom: 0
+
   &__new
     margin-bottom: 64px
+
+    .btn
+
+      @media $tablet
+        display: none
 
   &__popular
     margin-bottom: 64px
 
+    .btn
+
+      @media $tablet
+        display: none
+
   &__useful
     margin-bottom: 72px
+
+    .btn
+
+      @media $tablet
+        display: none
+
+    .articles
+
+      &__item
+
+        @media $tablet
+          width: 100%
+          padding-bottom: 24px
+          border-bottom: 1px solid $gray
+          margin-bottom: 24px
+
+        &:nth-child(odd)
+
+          @media $tablet
+            padding-right: 0
+
+        &:nth-child(even)
+
+          @media $tablet
+            padding-left: 0
+
+        &:last-child
+
+          @media $tablet
+            margin-bottom: 0
+
+    .article
+
+      @media $tablet
+        padding-left: 50%
+        position: relative
+
+      &__img
+
+        @media $tablet
+          position: absolute
+          top: 0
+          left: 0
+          width: calc(50% - 16px)
+
+      &__descr
+
+        @media $tablet
+          font-size: 18px
+
+      &__category
+
+        @media $tablet
+          margin-bottom: 1px
+
+      &__name
+
+        @media $tablet
+          margin-bottom: 1px
+
+      &__descr
+
+        @media $tablet
+          height: 110px
+
+        &.opened
+
+          @media $tablet
+            height: auto
+
+      &__push
+
+        @media $tablet
+          height: 54px
+          top: -33px
+          margin-bottom: -33px
+
+          &::before
+
+            @media $tablet
+              top: auto
+              bottom: -5px
 
   &__rubric
     margin-bottom: 39px
 
     .swiper-pagination
       padding-top: 32px
+
+
+
+  &__heading
+    margin-bottom: 32px
+
+    @media $tablet
+      display: flex
+      justify-content: space-between
+      padding-bottom: 8px
+      border-bottom: 1px solid $gray
+
+  &__subheading
+    display: none
+
+    @media $tablet
+      display: block
+      font-weight: 600
+      font-size: 14px
+      line-height: 23px
+      text-align: right
+      color: $gray3
 
 
