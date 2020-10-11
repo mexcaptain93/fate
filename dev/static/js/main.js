@@ -66,7 +66,6 @@ function articlesSlider() {
             type: 'bullets',
         },
         breakpoints: {
-            // when window width is >= 320px
             768: {
                 coverflowEffect: {
                     rotate: 0,
@@ -87,7 +86,17 @@ function articlesSlider() {
             el: '.swiper-pagination',
             type: 'bullets',
         },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30
+
+            },
+
+        }
     });
+
+    console.log(indexRubricSlider)
 
 
 
