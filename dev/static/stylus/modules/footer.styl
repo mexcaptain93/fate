@@ -57,10 +57,15 @@
     display: none
 
   &__menu
-    display: none
+    //display: none
     margin-bottom: 32px
 
     .menu
+
+      &__list
+        @media $tablet
+          display: flex
+          justify-content: space-between
 
       &__item
         margin-bottom: 24px
@@ -70,6 +75,15 @@
         font-size: 18px
         line-height: 28px
         letter-spacing: 0.02em
+
+        @media $tablet
+          display: none
+
+        &:nth-child(-n+3)
+          @media $tablet
+            display: block
+            width: calc(33.3% - (28px / 2))
+            margin-bottom: 0
 
         &:last-child
           margin-bottom: 0
@@ -90,6 +104,9 @@
         &:last-child
           margin-bottom: 0
 
+          @media $tablet
+            border-bottom: none
+
   &__socials
     padding-bottom: 24px
     border-bottom: 1px solid $gray7
@@ -105,6 +122,12 @@
       &__item
         padding: 0 5px
 
+  &__bottom
+
+    @media $tablet
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
 
   &__copyright
     border: 1px solid $gray4
@@ -117,10 +140,19 @@
     letter-spacing: 0.05em
     color: $gray2
 
+    @media $tablet
+      width: 304px
+      margin-right: 35px
+      margin-bottom: 33px
+
   &__content
     @extend .footer__copyright
 
     min-height: 69px
+
+    @media $tablet
+      width: 369px
+      margin-right: 0
 
   &__counters
     @extend .footer__copyright
@@ -129,5 +161,9 @@
     align-items: center
     justify-content: center
     margin-bottom: 0
+
+    @media $tablet
+      width: 222px
+      margin-right: 0
 
 
