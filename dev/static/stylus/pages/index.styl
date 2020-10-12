@@ -1,13 +1,16 @@
 .index
 
-  .content .container
-    overflow: hidden
+
 
   &__slider
     margin-bottom: 39px
+    overflow: hidden
+    padding: 0 20px
+
 
     @media $tablet
       margin-bottom: 49px
+      padding: 0 30px
 
 
     .swiper
@@ -30,6 +33,10 @@
       @media $tablet
         width: 396px
         margin: 0 auto
+
+      &:hover
+        .article-slider__name
+          color: $blue
 
       &__img
 

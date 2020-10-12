@@ -53,7 +53,6 @@ function articlesSlider() {
         grabCursor: true,
         parallax: true,
         centeredSlides: true,
-        slidesPerView: 'auto',
         initialSlide: 0,
         coverflowEffect: {
             rotate: 0,
@@ -63,6 +62,7 @@ function articlesSlider() {
             stretch: 10
         },
         loop: true,
+        loopedSlides: 2,
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
@@ -76,10 +76,10 @@ function articlesSlider() {
                     slideShadows: false,
                     modifier: 11,
                     depth: 50,
-                    stretch: 40
+                    stretch: 45
                 },
             },
-            900: {
+            1000: {
                 slidesPerView: 'auto',
                 coverflowEffect: {
                     rotate: 0,
@@ -89,13 +89,22 @@ function articlesSlider() {
                     stretch: 55
                 },
             },
+            1280: {
+                slidesPerView: 'auto',
+                coverflowEffect: {
+                    rotate: 0,
+                    slideShadows: false,
+                    modifier: 13,
+                    depth: 50,
+                    stretch: 35
+                },
+            },
         },
         init: false
 
     });
     indexTopSlider.on('init', function() {
-        $('.js-index-top-slider .swiper-pagination').prepend('<i class="swiper-top-prev"></i>')
-        $('.js-index-top-slider .swiper-pagination').append('<i class="swiper-top-next"></i>')
+        $('.js-index-top-slider .swiper-pagination').append('<i class="swiper-top-prev"></i><i class="swiper-top-next"></i>')
     });
 
     indexTopSlider.init();

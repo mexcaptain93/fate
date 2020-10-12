@@ -27,6 +27,9 @@ a
 	color inherit
 	text-decoration none
 
+	&:hover
+		color: $blue
+
 audio,
 canvas,
 iframe,
@@ -72,7 +75,39 @@ button
 	@media $tablet
 		padding: 0 30px
 
+	@media $desktop
+		width: 964px
+		box-sizing: content-box
+		margin: 0 auto
 
+	&_wide
+		padding: 0
+
+		@media $tablet
+			padding: 0 30px
+
+
+.main
+
+	@media $desktop
+		width: 714px
+
+.sidebar
+
+	@media $desktop
+		width: 214px
+
+.box
+	padding: 0 20px
+
+	@media $tablet
+		padding: 0 30px
+
+	@media $desktop
+		width: 964px
+		box-sizing: content-box
+		margin: 0 auto
+		display: flex
 
 
 
