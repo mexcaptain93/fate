@@ -65,7 +65,7 @@
       &__list
         @media $tablet
           display: flex
-          justify-content: space-between
+          flex-wrap: wrap
 
       &__item
         margin-bottom: 24px
@@ -77,13 +77,28 @@
         letter-spacing: 0.02em
 
         @media $tablet
-          display: none
 
-        &:nth-child(-n+3)
+          display: block
+          width: calc((100% - (28px * 2)) / 3)
+          margin-bottom: 30px
+          margin-right: 28px
+
+        &:nth-child(3n+3)
+
           @media $tablet
-            display: block
-            width: calc(33.3% - (28px / 2))
-            margin-bottom: 0
+            margin-right: 0
+
+          @media $desktop
+            margin-right: 32px
+
+        &:nth-child(4n+4)
+          margin-right: 0
+
+        @media $desktop
+          width: calc((100% - (32px * 3)) / 4)
+          margin-right: 32px
+
+
 
         &:last-child
           margin-bottom: 0
@@ -130,7 +145,7 @@
       justify-content: center
 
   &__copyright
-    padding: 0 20px
+    //padding: 0 20px
     min-height: 45px
     margin-bottom: 24px
 
