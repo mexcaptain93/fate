@@ -169,6 +169,25 @@
                     &::after
                         display: none
 
+                &_active
+                    color: $blue
+
+                    &::before
+                        content: ''
+                        display: block
+                        position: absolute;
+                        top: -11px
+                        left: calc(50% - 4px)
+                        transform: translateX(-50%)
+                        background-color: $blue
+                        width: 76px
+                        height: 3px
+
+                    &::after
+                        background-image url('../img/svg/menu-arrow-down-blue.svg')
+
+
+
                 &:last-child
                     margin-right 0
 
