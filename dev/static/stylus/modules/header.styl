@@ -4,7 +4,7 @@
     z-index: 13
 
     @media $desktop
-        border-bottom: none
+        //border-bottom: none
         min-height: 85px
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
@@ -26,7 +26,7 @@
             @media $desktop
                 height: 85px
                 justify-content: center
-                border-bottom: 1px solid $gray
+                //border-bottom: 1px solid $gray
 
 
     &__burger
@@ -127,6 +127,7 @@
 
             &__list
                 display: flex
+                flex-wrap: wrap
 
             &__item
                 margin-right 16px
@@ -159,6 +160,15 @@
                         right -6px
                         top: calc(50% - 2px)
 
+                &_other
+                    @extend .header__menu .menu__item_hassub
+
+                    line-height: 15px
+                    padding-left: 15px
+
+                    &::after
+                        display: none
+
                 &:last-child
                     margin-right 0
 
@@ -177,6 +187,9 @@
                         &__item
                             padding 10px
                             color: $gray5
+
+                            white-space: normal
+                            line-height: 22px
 
                             &:hover
                                 color $blue
