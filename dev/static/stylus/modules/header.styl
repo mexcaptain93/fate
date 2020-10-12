@@ -100,6 +100,8 @@
             border-left: 1px solid transparent
             border-right: 1px solid transparent
             border-bottom: 1px solid transparent
+            position: relative
+            top: -1px
 
         &_active
 
@@ -218,14 +220,21 @@
         display none
         background-color: $white
         padding-bottom 24px
-        padding-top: 24px
+        padding-top: 25px
+        position: relative
+        top: -1px
+        border-bottom: 1px solid $gray
 
         @media $tablet
             padding-top: 30px
 
+
         @media $desktop
-            padding-top 16px
+            padding-top 17px
             padding-bottom 16px
+            top: 0
+            box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+
 
 
         .search
