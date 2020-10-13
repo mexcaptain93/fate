@@ -17,7 +17,10 @@ function header() {
         menu = $('.js-mobile-menu'),
         level1 = '.mobile-menu__item',
         level2 = '.submenu',
-        activeMenu= 'mobile-menu__item_active';
+        activeMenu= 'mobile-menu__item_active',
+        sidemenu = $('.js-side-menu'),
+        sidemenuLevel1 = '.side-menu__item',
+        sidemenuLevel2 = '.submenu__item';
 
 
     // Поиск
@@ -37,13 +40,19 @@ function header() {
         menu.find(level2).hide();
         togglerSearch.removeClass('header__search-block_active');
         $(level1).removeClass(activeMenu);
-    })
+    });
 
     menu.find(level1).on('click', function (e) {
         menu.find(level2).hide();
         menu.find(level1).removeClass(activeMenu);
         $(this).toggleClass(activeMenu).find(level2).show();
-    })
+    });
+
+    sidemenu.find(sidemenuLevel1).on('click', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('side-menu__item_opened');
+    });
+
 
 }
 

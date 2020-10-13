@@ -398,11 +398,11 @@ block content
 			.index__free.free
 				span Свободная HTML-область
 		.sidebar
-			.side-menu
+			.side-menu.js-side-menu
 				.side-menu__heading
 					span Меню
 				ul.side-menu__list
-					.side-menu__item.submenu__item_hassub
+					.side-menu__item.side-menu__item_hassub.side-menu__item_opened
 						a(href='#') Психология разделов
 						.submenu
 							ul.submenu__list
@@ -410,13 +410,13 @@ block content
 									a(href='#') Болезнь 1
 								li.submenu__item
 									a(href='#') Болезнь 2
-								li.submenu__item
-									a(href='#') Болезнь 3
+								li.submenu__item.submenu__item_active
+									a(href='#') Шизотипическое расстройство личности
 								li.submenu__item
 									a(href='#') Болезнь 4
 								li.submenu__item
 									a(href='#') Болезнь 5
-					.side-menu__item.submenu__item_hassub
+					.side-menu__item.side-menu__item_hassub
 						a(href='#') Социум
 						.submenu
 							ul.submenu__list
@@ -430,7 +430,7 @@ block content
 									a(href='#') Болезнь 4
 								li.submenu__item
 									a(href='#') Болезнь 5
-					.side-menu__item.submenu__item_hassub
+					.side-menu__item.side-menu__item_hassub
 						a(href='#') Психиатрия
 						.submenu
 							ul.submenu__list
@@ -444,7 +444,7 @@ block content
 									a(href='#') Болезнь 4
 								li.submenu__item
 									a(href='#') Болезнь 5
-					.side-menu__item.submenu__item_hassub
+					.side-menu__item.side-menu__item_hassub
 						a(href='#') Фобии
 						.submenu
 							ul.submenu__list
@@ -458,7 +458,7 @@ block content
 									a(href='#') Болезнь 4
 								li.submenu__item
 									a(href='#') Болезнь 5
-					.side-menu__item.submenu__item_hassub
+					.side-menu__item.side-menu__item_hassub
 						a(href='#') Терапия
 						.submenu
 							ul.submenu__list
@@ -472,7 +472,7 @@ block content
 									a(href='#') Болезнь 4
 								li.submenu__item
 									a(href='#') Болезнь 5
-					.side-menu__item.submenu__item_hassub
+					.side-menu__item.side-menu__item_hassub
 						a(href='#') Эксперименты
 						.submenu
 							ul.submenu__list
