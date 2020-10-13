@@ -199,8 +199,7 @@
         margin-bottom: -35px
         background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 72.4%)
 
-        &::before
-            content: ''
+        i
             display: block
             background-image: url('../img/svg/push.svg')
             background-repeat: no-repeat
@@ -214,9 +213,13 @@
             transform: translate(-50%, -50%) rotate(0deg)
             cursor: pointer
 
+            &:hover
+                width: 18px
+                height: 18px
+
         &.opened
 
-            &::before
+            i
                 transform: translate(-50%, -50%) rotate(180deg)
 
 
