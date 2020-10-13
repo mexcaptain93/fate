@@ -145,10 +145,8 @@ function articlesSlider() {
     });
 
     var sideRubricSlider = new Swiper('.js-side-rubric-slider .swiper-container', {
-        slidesPerColumn: 2,
         slidesPerView: 1,
-        loop: true,
-        slidesPerColumnFill: 'row'
+        loop: true
     })
 
     $('.js-side-rubric-slider-prev').on('click', function (e) {

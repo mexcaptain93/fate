@@ -144,9 +144,12 @@
       flex-wrap: wrap
       justify-content: center
 
+    @media $desktop
+      justify-content: space-between
+
   &__copyright
     //padding: 0 20px
-    min-height: 45px
+    //min-height: 45px
     margin-bottom: 24px
 
     font-size: 12px
@@ -162,7 +165,7 @@
   &__content
     @extend .footer__copyright
 
-    min-height: 69px
+    //min-height: 69px
 
     @media $tablet
       width: 369px
@@ -172,8 +175,9 @@
     @extend .footer__copyright
 
     display: flex
+    flex-direction: column
     align-items: center
-    justify-content: center
+    justify-content: flex-start
     margin-bottom: 0
 
     @media $tablet
