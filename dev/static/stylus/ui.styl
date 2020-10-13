@@ -400,3 +400,36 @@
             font-size: 15px
             line-height: 26px
 
+
+.breadcrumbs
+    margin-bottom: 17px
+
+    font-size: 12px
+    color: $gray8
+
+    @media $tablet
+        margin-bottom: 24px
+
+        font-size: 14px
+
+    @media $desktop
+        font-size: 13px
+
+    &__list
+        display: flex
+        flex-wrap: wrap
+
+    &__item
+        margin-right: 16px
+        margin-bottom: 8px
+
+        &::after
+            content: '/'
+            margin-left: 16px
+            
+        &:last-child
+            color: $gray5
+            
+            &::after
+                display: none
+
