@@ -113,10 +113,20 @@ function articlesSlider() {
 
     });
     indexTopSlider.on('init', function() {
-        $('.js-index-top-slider .swiper-pagination').append('<i class="swiper-top-prev"></i><i class="swiper-top-next"></i>')
+        $('.js-index-top-slider .swiper-pagination').append('<i class="swiper-top-prev js-index-top-slider-prev"></i><i class="swiper-top-next js-index-top-slider-next"></i>')
     });
 
     indexTopSlider.init();
+
+    $('.js-index-top-slider-prev').on('click', function (e) {
+        e.preventDefault();
+        indexTopSlider.slidePrev();
+    });
+
+    $('.js-index-top-slider-next').on('click', function (e) {
+        e.preventDefault();
+        indexTopSlider.slideNext();
+    });
 
     var indexRubricSlider = new Swiper('.js-index-rubric-slider .swiper-container', {
         loop: true,

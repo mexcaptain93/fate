@@ -23,6 +23,34 @@
 
         .article-slider__name
           display: block
+        
+      &-pagination
+        display: flex
+        justify-content: center
+
+      &-top-prev
+        display: block
+        order: -1
+        position: relative
+        top: -3px
+        width: 6px
+        height: 10px
+        padding: 9px 12px
+        background-image: url('../img/svg/slider-prev.svg')
+        background-position: center center
+        background-repeat: no-repeat
+        cursor: pointer
+
+      &-top-next
+        position: relative
+        top: -3px
+        width: 6px
+        height: 10px
+        padding: 9px 12px
+        background-image: url('../img/svg/slider-next.svg')
+        background-position: center center
+        background-repeat: no-repeat
+        cursor: pointer
 
     .article-slider
       position: relative
