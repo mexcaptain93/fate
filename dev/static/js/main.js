@@ -134,6 +134,23 @@ function articlesSlider() {
         }
     });
 
+    var sideRubricSlider = new Swiper('.js-side-rubric-slider .swiper-container', {
+        slidesPerColumn: 2,
+        slidesPerView: 1,
+        loop: true,
+        slidesPerColumnFill: 'row'
+    })
+
+    $('.js-side-rubric-slider-prev').on('click', function (e) {
+       e.preventDefault();
+       sideRubricSlider.slidePrev();
+    });
+
+    $('.js-side-rubric-slider-next').on('click', function (e) {
+       e.preventDefault();
+       sideRubricSlider.slideNext();
+    });
+
 
 
 

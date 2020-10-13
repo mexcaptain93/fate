@@ -326,3 +326,59 @@
                 transform: rotate(180deg)
 
 
+
+.rubric-slider
+    position: relative
+    padding: 16px 10px 0 10px
+    border: 1px solid $gray7
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25)
+    margin-bottom: 56px
+
+    &__name
+        border-bottom: 1px solid $gray
+        margin-bottom: 24px
+        padding-bottom: 14px
+        padding-right: 48px
+
+        font-weight: bold
+        font-size: 18px
+        line-height: 28px
+
+    &__arrows
+        position: absolute
+        top: 20px
+        right: 10px
+        display: flex
+        z-index: 2
+
+
+    &__prev
+        width: 6px
+        height: 10px
+        padding: 9px 12px
+        background-image: url('../img/svg/slider-prev.svg')
+        background-position: center center
+        background-repeat: no-repeat
+        cursor: pointer
+
+    &__next
+        width: 6px
+        height: 10px
+        padding: 9px 12px
+        background-image: url('../img/svg/slider-next.svg')
+        background-position: center center
+        background-repeat: no-repeat
+        cursor: pointer
+
+    .article
+        margin-bottom: 24px
+
+        &__category
+            font-size: 13px
+
+        &__name
+            margin-bottom: 6px
+
+            font-size: 15px
+            line-height: 26px
+

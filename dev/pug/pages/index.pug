@@ -488,28 +488,35 @@ block content
 									a(href='#') Болезнь 5
 			.free
 				span Свободная HTML-область
-			.rubric-slider
+			.rubric-slider.js-side-rubric-slider
+				.rubric-slider__arrows
+					.rubric-slider__prev.js-side-rubric-slider-prev
+					.rubric-slider__next.js-side-rubric-slider-next
+				.rubric-slider__name
+					a(href='#') Название рубрики
+
+
 				.swiper-container
 					.swiper-wrapper
 						.swiper-slide
+
 							.article
 								.article__img
 									a(href='#')
-										img(src='static/img/content/article-new-0.jpg' alt='Психология подросткового возраста')
+										img(src='static/img/content/article-new-1.jpg' alt='Психология подросткового возраста')
 								.article__category
 									span Детская психология
 								.article__name.like-h4
-									span Психология подросткового возраста
+									a(href='#') Психология подросткового возраста
 						.swiper-slide
 							.article
 								.article__img
 									a(href='#')
-										img(src='static/img/content/article-new-0.jpg' alt='Психология подросткового возраста')
+										img(src='static/img/content/article-new-1.jpg' alt='Психология подросткового возраста')
 								.article__category
 									span Детская психология
 								.article__name.like-h4
-									span Психология подросткового возраста
-
+									a(href='#') Психология подросткового возраста
 						.swiper-slide
 							.article
 								.article__img
@@ -518,7 +525,7 @@ block content
 								.article__category
 									span Детская психология 2
 								.article__name.like-h4
-									span Психология подросткового возраста
+									a(href='#') Психология подросткового возраста
 						.swiper-slide
 							.article
 								.article__img
@@ -529,6 +536,5 @@ block content
 								.article__name.like-h4
 									span Психология подросткового возраста
 
-					.swiper-pagination
 			.free
 				span Свободная HTML-область
