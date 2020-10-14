@@ -45,7 +45,9 @@
     @extend .input
 
     min-height: 100px
-    border-bottom: 1px solid $blue
+
+    &:active, &:focus
+        border-bottom: 1px solid $blue
 
 .checkbox
     position: absolute
@@ -457,7 +459,7 @@
     color: $gray8
 
     @media $tablet
-        margin-bottom: 24px
+        margin-bottom: 32px
 
         font-size: 14px
 
@@ -516,6 +518,9 @@
         line-height: 26px
         color: $black
 
+        @media $tablet
+            font-size: 24px
+
     &__counter
         margin-left: 9px
 
@@ -528,6 +533,19 @@
 
     &__more
         margin-bottom: 48px
+
+        .btn
+
+            @media $tablet
+                &::after
+                    content: ''
+                    display: inline-block
+                    background-image: url('../img/svg/push.svg')
+                    width: 16px
+                    height: 16px
+                    position: relative
+                    top: 3px
+                    left: 8px
 
     &__item
         margin-bottom: 24px
@@ -560,6 +578,17 @@
 
 
     .form
+
+        &__row
+
+            &:nth-child(-n+2)
+
+                @media $tablet
+                    width: calc(50% - 15px)
+                    display: inline-block
+
+            &:first-child
+                margin-right: 25px
 
         &__label
             margin-bottom: 8px

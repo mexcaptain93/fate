@@ -1,14 +1,81 @@
 .category
   
-  &__heading
+  .heading
+
+    @media $tablet
+      align-items: flex-end
+
+    &_nosub
+      border: none
+
+      @media $tablet
+        font-size: 34px
+        line-height: 45px
+        letter-spacing: 0.02em
+
+    .subheading
+
+      @media $tablet
+        white-space: nowrap
 
     .like-h3
       text-align: left
 
+      @media $tablet
+        font-size: 30px
+
   &__articles
+    @extend .index__useful
+
+    @media $tablet
+      margin-bottom: 64px
+
+
+
+  &__subcategory
 
     .btn
       margin-bottom: 64px
+
+      @media $tablet
+
+        &::after
+          content: ''
+          display: inline-block
+          background-image: url('../img/svg/push.svg')
+          width: 16px
+          height: 16px
+          position: relative
+          top: 3px
+          left: 8px
+
+    .articles
+
+      &__list
+
+        @media $tablet
+          display: flex
+          flex-wrap: wrap
+
+      &__item
+        margin-bottom: 5px
+
+        @media $tablet
+          width: 50%
+
+        &:nth-child(odd)
+
+          @media $tablet
+            padding-right: 15px
+
+        &:nth-child(even)
+
+          @media $tablet
+            padding-left: 15px
+
+        &:last-child
+          margin-bottom: 0
+
 
   &__comments
     margin-bottom: 72px
