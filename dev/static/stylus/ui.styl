@@ -293,6 +293,12 @@
         min-height: 225px
         margin-bottom: 64px
 
+    &_desktop
+        display: none
+
+        @media $desktop
+            display: flex
+
 
 .swiper
 
@@ -490,6 +496,7 @@
     @media $tablet
         display: flex
         justify-content: space-between
+        align-items: flex-end
         padding-bottom: 8px
         border-bottom: 1px solid $gray
 
