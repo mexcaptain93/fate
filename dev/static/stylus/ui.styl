@@ -37,11 +37,46 @@
     line-height: 26px;
     letter-spacing: 0.02em;
     color $black
-    text-align center
 
     &:active 
-        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
 
+.textarea
+    @extend .input
+
+    min-height: 100px
+    border-bottom: 1px solid $blue
+
+.checkbox
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+    & + label
+        display: inline-block
+        user-select: none
+
+        &::before
+            content: ''
+            display: inline-block
+            width: 15px
+            height: 15px
+            border: 1px solid $blue
+            border-radius: 1px
+
+    &:checked + label::before
+        background-image: url('../img/svg/checkbox-active.svg')
+        background-repeat: no-repeat
+        border: none
+
+
+
+
+.required
+
+    &::after
+        content: ' *'
+        color: $blue
 
 .like-h3
     font-family: $RobotoSlab
@@ -446,4 +481,117 @@
             
             &::after
                 display: none
+
+.heading
+    margin-bottom: 32px
+
+    @media $tablet
+        display: flex
+        justify-content: space-between
+        padding-bottom: 8px
+        border-bottom: 1px solid $gray
+
+.subheading
+    display: none
+
+    @media $tablet
+        display: block
+        font-weight: 600
+        font-size: 14px
+        line-height: 23px
+        text-align: right
+        color: $gray3
+
+        
+.comments
+    
+    &__heading
+        margin-bottom: 33px
+
+        text-align: left
+        font-family: $RobotoSlab
+        font-style: normal
+        font-weight: normal
+        font-size: 20px
+        line-height: 26px
+        color: $black
+
+    &__counter
+        margin-left: 9px
+
+        font-family: mainFont
+        font-size: 16px
+        color: $gray2
+
+    &__list
+        margin-bottom: 32px
+
+    &__more
+        margin-bottom: 48px
+
+    &__item
+        margin-bottom: 24px
+
+        &:last-child
+            margin-bottom: 0
+
+    .comment
+
+        &__author
+            margin-bottom: 8px
+
+            font-family: $RobotoSlab
+            font-size: 14px
+            line-height: 28px
+            color: $black
+
+        &__text
+            margin-bottom: 4px
+
+            font-size: 11px
+            line-height: 24px
+            color: $gray_dark
+
+        &__date-time
+            font-size: 11px
+            line-height: 15px
+            color: $gray3
+
+
+
+    .form
+
+        &__label
+            margin-bottom: 8px
+
+            color: $gray2
+            font-size: 14px
+            line-height: 13px
+
+        &__input
+            margin-bottom: 16px
+
+        .textarea
+            margin-bottom: 16px
+
+        &__privacy
+            position: relative
+            margin-bottom: 24px
+
+            font-size: 14px
+            line-height: 18px
+
+            .checkbox
+
+                & + label
+                    padding-left: 23px
+
+                    &::before
+                        position: absolute
+                        top: 2px
+                        left: 0
+
+            a
+                color: $blue
+
 

@@ -57,110 +57,129 @@ function header() {
 }
 
 function articlesSlider() {
-    var indexTopSlider = new Swiper('.js-index-top-slider .swiper-container', {
-        effect: 'coverflow',
-        grabCursor: true,
-        parallax: true,
-        centeredSlides: true,
-        initialSlide: 0,
-        coverflowEffect: {
-            rotate: 0,
-            slideShadows: false,
-            modifier: 12,
-            depth: 50,
-            stretch: 10
-        },
-        loop: true,
-        loopedSlides: 2,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true,
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 'auto',
-                coverflowEffect: {
-                    rotate: 0,
-                    slideShadows: false,
-                    modifier: 11,
-                    depth: 50,
-                    stretch: 45
+
+    if ($('.js-index-top-slider').length) {
+        var indexTopSlider = new Swiper('.js-index-top-slider .swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            parallax: true,
+            centeredSlides: true,
+            initialSlide: 0,
+            coverflowEffect: {
+                rotate: 0,
+                slideShadows: false,
+                modifier: 12,
+                depth: 50,
+                stretch: 10
+            },
+            loop: true,
+            loopedSlides: 2,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 'auto',
+                    coverflowEffect: {
+                        rotate: 0,
+                        slideShadows: false,
+                        modifier: 11,
+                        depth: 50,
+                        stretch: 45
+                    },
+                },
+                1000: {
+                    slidesPerView: 'auto',
+                    coverflowEffect: {
+                        rotate: 0,
+                        slideShadows: false,
+                        modifier: 13,
+                        depth: 50,
+                        stretch: 55
+                    },
+                },
+                1280: {
+                    slidesPerView: 'auto',
+                    coverflowEffect: {
+                        rotate: 0,
+                        slideShadows: false,
+                        modifier: 13,
+                        depth: 50,
+                        stretch: 35
+                    },
                 },
             },
-            1000: {
-                slidesPerView: 'auto',
-                coverflowEffect: {
-                    rotate: 0,
-                    slideShadows: false,
-                    modifier: 13,
-                    depth: 50,
-                    stretch: 55
+            init: false
+
+        });
+        indexTopSlider.on('init', function() {
+            $('.js-index-top-slider .swiper-pagination').append('<i class="swiper-top-prev js-index-top-slider-prev"></i><i class="swiper-top-next js-index-top-slider-next"></i>')
+        });
+
+        indexTopSlider.init();
+
+        $('.js-index-top-slider-prev').on('click', function (e) {
+            e.preventDefault();
+            indexTopSlider.slidePrev();
+        });
+
+        $('.js-index-top-slider-next').on('click', function (e) {
+            e.preventDefault();
+            indexTopSlider.slideNext();
+        });
+    }
+
+    if ($('.js-index-rubric-slider').length) {
+        var indexRubricSlider = new Swiper('.js-index-rubric-slider .swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+
                 },
-            },
-            1280: {
-                slidesPerView: 'auto',
-                coverflowEffect: {
-                    rotate: 0,
-                    slideShadows: false,
-                    modifier: 13,
-                    depth: 50,
-                    stretch: 35
+
+            }
+        });
+            var indexRubricSlider = new Swiper('.js-index-rubric-slider .swiper-container', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
                 },
-            },
-        },
-        init: false
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
 
-    });
-    indexTopSlider.on('init', function() {
-        $('.js-index-top-slider .swiper-pagination').append('<i class="swiper-top-prev js-index-top-slider-prev"></i><i class="swiper-top-next js-index-top-slider-next"></i>')
-    });
+                    },
 
-    indexTopSlider.init();
+                }
+            });
+    }
 
-    $('.js-index-top-slider-prev').on('click', function (e) {
-        e.preventDefault();
-        indexTopSlider.slidePrev();
-    });
+    if ($('.js-index-top-slider').length) {
+        var sideRubricSlider = new Swiper('.js-side-rubric-slider .swiper-container', {
+            slidesPerView: 1,
+            loop: true
+        });
 
-    $('.js-index-top-slider-next').on('click', function (e) {
-        e.preventDefault();
-        indexTopSlider.slideNext();
-    });
+        $('.js-side-rubric-slider-prev').on('click', function (e) {
+            e.preventDefault();
+            sideRubricSlider.slidePrev();
+        });
 
-    var indexRubricSlider = new Swiper('.js-index-rubric-slider .swiper-container', {
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 30
-
-            },
-
-        }
-    });
-
-    var sideRubricSlider = new Swiper('.js-side-rubric-slider .swiper-container', {
-        slidesPerView: 1,
-        loop: true
-    })
-
-    $('.js-side-rubric-slider-prev').on('click', function (e) {
-       e.preventDefault();
-       sideRubricSlider.slidePrev();
-    });
-
-    $('.js-side-rubric-slider-next').on('click', function (e) {
-       e.preventDefault();
-       sideRubricSlider.slideNext();
-    });
-
-
-
+        $('.js-side-rubric-slider-next').on('click', function (e) {
+            e.preventDefault();
+            sideRubricSlider.slideNext();
+        });
+    }
 
 }
 
