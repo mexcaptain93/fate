@@ -19,7 +19,7 @@ function header() {
         level2 = '.submenu',
         activeMenu= 'mobile-menu__item_active',
         sidemenu = $('.js-side-menu'),
-        sidemenuLevel1 = '.side-menu__item',
+        sidemenuLevel1 = '.side-menu__item i',
         sidemenuLevel2 = '.submenu__item';
 
 
@@ -50,9 +50,18 @@ function header() {
 
     sidemenu.find(sidemenuLevel1).on('click', function (e) {
         e.preventDefault();
-        $(this).toggleClass('side-menu__item_opened');
+        $(this).parent().toggleClass('side-menu__item_opened');
     });
 
+    //adaptive cut menu
+    var wrapper = document.querySelector(".nav-wrapper");
+    var nav = priorityNav.init({
+        mainNavWrapper: ".header__menu", // mainnav wrapper selector (must be direct parent from mainNav)
+        mainNav: ".menu__list", // mainnav selector. (must be inline-block)
+        navDropdownLabel: '...',
+        navDropdownClassName: "menu__dropdown", // class used for the dropdown.
+        navDropdownToggleClassName: "menu__dropdown-toggle", // class used for the dropdown toggle.
+    });
 
 }
 

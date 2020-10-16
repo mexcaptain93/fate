@@ -119,6 +119,7 @@
 
         @media $desktop
             display: block
+            flex-grow: 1
             padding-left: 29px
             padding-right: 16px
 
@@ -128,10 +129,49 @@
                 display: none
 
             &__list
-                display: flex
+                display: inline-block
                 flex-wrap: wrap
 
+            &__dropdown-wrapper
+                position: relative
+
+                &:hover
+
+                    .menu__dropdown
+                        display: block
+
+            &__dropdown
+                display: none
+                position absolute
+                top 100%
+                left -10px
+                background-color $white
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+
+
+                .menu__item
+                    padding 10px
+                    color: $gray5
+
+                    white-space: normal
+                    line-height: 22px
+
+                    &:hover
+                        color $blue
+
+            &__dropdown-toggle
+                background: none
+                border: none
+                outline: none
+                margin-left: 16px
+
+                color: $gray5
+                font-weight 600
+                font-size 18px
+
             &__item
+                display: inline-block
                 margin-right 16px
                 cursor pointer
                 position relative
