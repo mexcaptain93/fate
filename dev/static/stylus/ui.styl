@@ -689,3 +689,57 @@
                 width: 185px
 
 
+.pagination
+    display: flex
+    
+    font-size: 16px
+    line-height: 18px
+    letter-spacing: .16px
+
+    &__list
+        display: flex
+        margin: 0 auto
+
+    &__item
+        height: 48px
+        width: 48px
+        text-align: center
+        line-height: 48px
+
+        a
+            display: block
+            width: 48px
+            height: 48px
+
+        &_active
+            color: $white
+            background-color: $blue
+
+        &:hover
+            color: $blue
+            background-color: $white
+
+
+    &__prev
+        display: none
+
+        @media $tablet
+            display: block
+            @extend .pagination__item
+
+            background-image: url('../img/svg/slider-prev.svg')
+            background-position: center center
+            background-repeat: no-repeat
+            cursor: pointer
+
+    &__next
+        display: none
+
+        @media $tablet
+            display: block
+            @extend .pagination__item
+
+            background-image: url('../img/svg/slider-next.svg')
+            background-position: center center
+            background-repeat: no-repeat
+            cursor: pointer

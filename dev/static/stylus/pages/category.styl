@@ -27,7 +27,18 @@
     @media $tablet
       margin-bottom: 64px
 
+    .pagination
+      margin-top: -14px
 
+      @media $tablet
+        margin-top: 0
+
+    .articles
+
+      &__item
+
+        &:last-child
+          border-bottom: none
 
   &__subcategory
 
@@ -72,7 +83,6 @@
 
         &:last-child
           margin-bottom: 0
-
 
   &__comments
     margin-bottom: 72px
