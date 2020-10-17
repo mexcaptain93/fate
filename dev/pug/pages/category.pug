@@ -203,6 +203,7 @@ block content
 							.comment
 								.comment__author
 									span Гость
+									a(href='mailto:test@test.ru') test@test.ru
 								.comment__text
 									span Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cum deleniti dicta et ex iste laboriosam laudantium magni minima molestias nesciunt non numquam perspiciatis quisquam, saepe temporibus totam vero voluptas.
 								.comment__date-time
@@ -286,7 +287,7 @@ block content
 									span Психология подросткового возраста
 
 					.swiper-pagination
-			.index__free.free
+			.index__free.free.free_tablet
 				span Свободная HTML-область
 		.sidebar
 			.side-menu.js-side-menu
@@ -295,6 +296,7 @@ block content
 				ul.side-menu__list
 					.side-menu__item.side-menu__item_hassub.side-menu__item_opened
 						a(href='#') Психология разделов
+						i
 						.submenu
 							ul.submenu__list
 								li.submenu__item
@@ -308,6 +310,7 @@ block content
 								li.submenu__item
 									a(href='#') Болезнь 5
 					.side-menu__item.side-menu__item_hassub
+						i
 						a(href='#') Социум
 						.submenu
 							ul.submenu__list
@@ -323,6 +326,7 @@ block content
 									a(href='#') Болезнь 5
 					.side-menu__item.side-menu__item_hassub
 						a(href='#') Психиатрия
+						i
 						.submenu
 							ul.submenu__list
 								li.submenu__item
@@ -336,6 +340,7 @@ block content
 								li.submenu__item
 									a(href='#') Болезнь 5
 					.side-menu__item.side-menu__item_hassub
+						i
 						a(href='#') Фобии
 						.submenu
 							ul.submenu__list
@@ -350,6 +355,7 @@ block content
 								li.submenu__item
 									a(href='#') Болезнь 5
 					.side-menu__item.side-menu__item_hassub
+						i
 						a(href='#') Терапия
 						.submenu
 							ul.submenu__list
@@ -364,6 +370,7 @@ block content
 								li.submenu__item
 									a(href='#') Болезнь 5
 					.side-menu__item.side-menu__item_hassub
+						i
 						a(href='#') Эксперименты
 						.submenu
 							ul.submenu__list
@@ -380,52 +387,83 @@ block content
 			.free
 				span Свободная HTML-область
 			.rubric-slider.js-side-rubric-slider
-				.rubric-slider__arrows
-					.rubric-slider__prev.js-side-rubric-slider-prev
-					.rubric-slider__next.js-side-rubric-slider-next
-				.rubric-slider__name
-					a(href='#') Название рубрики
+
 
 
 				.swiper-container
 					.swiper-wrapper
 						.swiper-slide
-
+							.rubric-slider__name
+								a(href='#') Название
+								.rubric-slider__arrows
+									.rubric-slider__prev.js-side-rubric-slider-prev
+									.rubric-slider__next.js-side-rubric-slider-next
 							.article
 								.article__img
-									a(href='#')
-										img(src='static/img/content/article-new-1.jpg' alt='Психология подросткового возраста')
+									.article__img-wrap
+										a(href='#')
+											img(src='static/img/content/article-new-1.jpg' alt='Психология подросткового возраста')
 								.article__category
 									span Детская психология
 								.article__name.like-h4
 									a(href='#') Психология подросткового возраста
-						.swiper-slide
 							.article
 								.article__img
-									a(href='#')
-										img(src='static/img/content/article-new-1.jpg' alt='Психология подросткового возраста')
-								.article__category
-									span Детская психология
-								.article__name.like-h4
-									a(href='#') Психология подросткового возраста
-						.swiper-slide
-							.article
-								.article__img
-									a(href='#')
-										img(src='static/img/content/article-new-0.jpg' alt='Психология подросткового возраста')
+									.article__img-wrap
+										a(href='#')
+											img(src='static/img/content/article-new-0.jpg' alt='Психология подросткового возраста')
 								.article__category
 									span Детская психология 2
 								.article__name.like-h4
 									a(href='#') Психология подросткового возраста
 						.swiper-slide
+							.rubric-slider__name
+								a(href='#') Название рубрики 2
+								.rubric-slider__arrows
+									.rubric-slider__prev.js-side-rubric-slider-prev
+									.rubric-slider__next.js-side-rubric-slider-next
 							.article
 								.article__img
-									a(href='#')
-										img(src='static/img/content/article-new-0.jpg' alt='Психология подросткового возраста')
+									.article__img-wrap
+										a(href='#')
+											img(src='static/img/content/article-new-1.jpg' alt='Психология подросткового возраста')
 								.article__category
-									span Детская психология 3
+									span Детская психология
 								.article__name.like-h4
-									span Психология подросткового возраста
+									a(href='#') Психология подросткового возраста
+							.article
+								.article__img
+									.article__img-wrap
+										a(href='#')
+											img(src='static/img/content/article-new-0.jpg' alt='Психология подросткового возраста')
+								.article__category
+									span Детская психология 2
+								.article__name.like-h4
+									a(href='#') Психология подросткового возраста
+						.swiper-slide
+							.rubric-slider__name
+								a(href='#') Название рубрики
+								.rubric-slider__arrows
+									.rubric-slider__prev.js-side-rubric-slider-prev
+									.rubric-slider__next.js-side-rubric-slider-next
+							.article
+								.article__img
+									.article__img-wrap
+										a(href='#')
+											img(src='static/img/content/article-new-1.jpg' alt='Психология подросткового возраста')
+								.article__category
+									span Детская психология
+								.article__name.like-h4
+									a(href='#') Психология подросткового возраста
+							.article
+								.article__img
+									.article__img-wrap
+										a(href='#')
+											img(src='static/img/content/article-new-0.jpg' alt='Психология подросткового возраста')
+								.article__category
+									span Детская психология 2
+								.article__name.like-h4
+									a(href='#') Психология подросткового возраста
 
 			.free
 				span Свободная HTML-область

@@ -295,6 +295,12 @@
         @media $desktop
             display: flex
 
+    &_tablet
+        display: flex
+
+        @media $desktop
+            display: none
+
 
 .swiper
 
@@ -525,6 +531,10 @@
         @media $tablet
             font-size: 24px
 
+        @media $desktop
+            margin-bottom: 35px
+
+
     &__counter
         margin-left: 9px
 
@@ -532,11 +542,17 @@
         font-size: 16px
         color: $gray2
 
+        @media $desktop
+            margin-left: 10px
+
     &__list
         margin-bottom: 32px
 
     &__more
         margin-bottom: 48px
+
+        @media $desktop
+            margin-bottom: 51px
 
         .btn
 
@@ -567,6 +583,18 @@
             line-height: 28px
             color: $black
 
+            @media $desktop
+                font-size: 18px
+                line-height: 28px
+
+            a
+                display: none
+
+                @media $desktop
+                    display: inline-block
+                    margin-left: 6px
+
+                    color: $gray6
         &__text
             margin-bottom: 4px
 
@@ -574,10 +602,19 @@
             line-height: 24px
             color: $gray_dark
 
+            @media $desktop
+                font-size: 16px
+                line-height: 28px
+
+
         &__date-time
             font-size: 11px
             line-height: 15px
             color: $gray3
+
+            @media $desktop
+                font-size: 12px
+
 
 
 
@@ -604,8 +641,22 @@
         &__input
             margin-bottom: 16px
 
-        .textarea
-            margin-bottom: 16px
+            @media $desktop
+                margin-bottom: 24px
+
+            .input
+
+                @media $desktop
+                    padding: 10px 16px
+
+                    line-height: 18px
+
+
+            .textarea
+                margin-bottom: 16px
+
+                @media $desktop
+                    margin-bottom: 0
 
         &__privacy
             position: relative
@@ -613,6 +664,10 @@
 
             font-size: 14px
             line-height: 18px
+
+            @media $desktop
+                margin-top: -13px
+                margin-bottom: 15px
 
             .checkbox
 
@@ -626,5 +681,11 @@
 
             a
                 color: $blue
+
+
+        &__btn
+
+            @media $desktop
+                width: 185px
 
 
