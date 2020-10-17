@@ -516,7 +516,11 @@
 
         
 .comments
-    
+
+    @media $desktop
+        padding-top: 16px
+        border-top: 1px solid $gray7
+
     &__heading
         margin-bottom: 33px
 
@@ -629,7 +633,8 @@
                     display: inline-block
 
             &:first-child
-                margin-right: 25px
+                @media $tablet
+                    margin-right: 25px
 
         &__label
             margin-bottom: 8px
