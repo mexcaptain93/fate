@@ -12,6 +12,12 @@
       border-radius: 4px
       padding: 24px 16px 32px
 
+    @media $desktop
+      margin-bottom: 32px
+
+    @media $desktop_big
+      padding: 24px 16px 22px
+
 
     &__row
       display: block
@@ -26,12 +32,42 @@
         .form__item
           width: 100%
 
+          @media $desktop
+            width: 100%
+
+        .textarea
+
+          @media $tablet
+            min-height: 132px
+
+      &:first-child
+
+        .form__item
+          &:first-child
+
+            @media $desktop
+              width: 305px
+
+            @media $desktop_big
+              width: 409px
+
+          &:last-child
+
+            @media $desktop
+              width: 355px
+
+            @media $desktop_big
+              width: 425px
+
       &_captcha
 
         @media $tablet
           margin-bottom: 24px
           justify-content: flex-start
           align-items: center
+
+        @media $desktop
+          margin-bottom: 17px
 
         .form
 
@@ -75,12 +111,17 @@
                 margin-top: 20px
                 margin-left: 16px
 
+
     &__item
       margin-bottom: 24px
 
       @media $tablet
         width: calc((100% - 16px) / 2)
         margin-bottom: 16px
+
+
+
+
 
     &__label
       @extend .comments .form__label
@@ -96,6 +137,10 @@
 
       @media $tablet
         width: 100%
+
+      @media $desktop
+        width: 133px
+
 
 
 
