@@ -99,26 +99,18 @@ function articlesSlider() {
                         stretch: 45
                     },
                 },
-                1000: {
+
+                1366: {
                     slidesPerView: 'auto',
                     coverflowEffect: {
                         rotate: 0,
                         slideShadows: false,
-                        modifier: 13,
-                        depth: 50,
-                        stretch: 55
+                        modifier: 15,
+                        depth: 30,
+                        stretch: 45
                     },
                 },
-                1280: {
-                    slidesPerView: 'auto',
-                    coverflowEffect: {
-                        rotate: 0,
-                        slideShadows: false,
-                        modifier: 13,
-                        depth: 50,
-                        stretch: 35
-                    },
-                },
+
             },
             init: false
 
