@@ -304,7 +304,8 @@
         display none
         padding-top 16px
         color $white
-        height: calc(100vh - 71px)
+        min-height: calc(100vh - 71px)
+        padding-bottom: 20px
         z-index: 100
 
         @media $tablet
@@ -313,6 +314,8 @@
             border-bottom-left-radius: 12px
             border-bottom-right-radius: 12px
             height: auto
+            padding-bottom: auto
+            min-height: auto
 
         .mobile-menu
 

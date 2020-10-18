@@ -173,7 +173,7 @@ function articlesSlider() {
             });
     }
 
-    if ($('.js-index-top-slider').length) {
+    if ($('.js-side-rubric-slider').length) {
         var sideRubricSlider = new Swiper('.js-side-rubric-slider .swiper-container', {
             slidesPerView: 1,
             loop: true
