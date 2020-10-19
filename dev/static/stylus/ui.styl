@@ -58,6 +58,7 @@
     & + label
         display: inline-block
         user-select: none
+        cursor: pointer
 
         &::before
             content: ''
@@ -278,9 +279,7 @@
 .free
     box-sizing: border-box;
     border-radius: 4px;
-    display: flex
-    align-items: center
-    justify-content: center
+    display: block
     margin-bottom: 56px
 
     font-size: 18px
@@ -294,10 +293,10 @@
         display: none
 
         @media $desktop
-            display: flex
+            display: block
 
     &_tablet
-        display: flex
+        display: block
 
         @media $desktop
             display: none

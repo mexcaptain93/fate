@@ -4,6 +4,7 @@ $(document).ready(function () {
     articlesSlider();
     articlePush();
     footer();
+    privacyBtn();
 });
 
 
@@ -62,6 +63,11 @@ function header() {
         navDropdownClassName: "menu__dropdown", // class used for the dropdown.
         navDropdownToggleClassName: "menu__dropdown-toggle", // class used for the dropdown toggle.
     });
+
+    setTimeout(function () {
+        $('.header__top').css({'opacity': '1'});
+    }, 1000);
+
 
 }
 
@@ -198,5 +204,19 @@ function footer () {
         e.preventDefault();
         $('.js-footer-menu').slideToggle('fast');
         $(this).toggleClass('opened');
+    })
+}
+
+function privacyBtn() {
+    var btn = $('.js-privacy-input'),
+        label =  $('.js-privacy-label'),
+        privacy = $('.js-privacy');
+
+    label.on('click', function () {
+        if (privacy.prop('checked')) {
+            btn.prop('disabled', true);
+        } else {
+            btn.prop('disabled', false);
+        }
     })
 }
