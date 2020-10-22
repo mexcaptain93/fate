@@ -99,6 +99,7 @@
 
 
 .article
+    transition: .3s ease opacity
 
     &__img
         margin-bottom: 8px
@@ -183,6 +184,8 @@
     &__views
         margin-right: 16px
         vertical-align: middle
+        position: relative
+        padding-left: 19px
 
         &::before
             display: inline-block
@@ -193,12 +196,17 @@
             background-size: contain
             width: 15px
             height: 11px
-            margin-right: 4px
+            position: absolute
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
 
 
     &__stars
         margin-right: 16px
         vertical-align: middle
+        position: relative
+        padding-left: 16px
 
         &::before
             display: inline-block
@@ -209,12 +217,18 @@
             background-size: contain
             width: 15px
             height: 11px
+            position: absolute
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
 
 
 
     &__mail
         margin-right: 16px
         vertical-align: middle
+        position: relative
+        padding-left: 19px
 
         &::before
             display: inline-block
@@ -225,7 +239,10 @@
             background-size: contain
             width: 14px
             height: 14px
-            margin-right: 5px
+            position: absolute
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
 
         a
             text-decoration: underline
