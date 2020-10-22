@@ -351,18 +351,20 @@
             margin-top: 16px
 
             &_active
-                position: relative
                 color: $blue
 
-                &::before
-                    content: ''
-                    display: block
-                    width: 3px
-                    position: absolute
-                    top: -4px
-                    bottom: -4px
-                    left: -15px
-                    background-color: $blue
+                & > a
+                    position: relative
+
+                    &::before
+                        content: ''
+                        display: block
+                        width: 3px
+                        position: absolute
+                        top: -4px
+                        bottom: -4px
+                        left: -15px
+                        background-color: $blue
 
     &__item
         margin-bottom: 20px

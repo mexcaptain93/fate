@@ -124,6 +124,7 @@
             flex-grow: 1
             padding-left: 29px
             padding-right: 16px
+            z-index: 1
 
         .menu
 
@@ -165,6 +166,11 @@
 
                     &::after
                         display: none
+
+                    &_active
+
+                        &::before
+                            display: none
 
             &__dropdown-toggle
                 background: none
@@ -299,6 +305,9 @@
                 .input
                     border-top-right-radius: 0
                     border-bottom-right-radius: 0
+
+                    padding: 14px 16px
+                    border-right: none
 
             &__btn
 
