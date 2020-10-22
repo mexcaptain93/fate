@@ -2,6 +2,13 @@
     border-bottom: 1px solid $gray
     min-height: 71px
     z-index: 13
+    background-color: $white
+    position: sticky
+    top: 0
+    width: 100%
+
+    @media $tablet
+        position: static
 
     @media $desktop
         //border-bottom: none
@@ -124,6 +131,7 @@
             flex-grow: 1
             padding-left: 29px
             padding-right: 16px
+            z-index: 1
 
         .menu
 
@@ -165,6 +173,11 @@
 
                     &::after
                         display: none
+
+                    &_active
+
+                        &::before
+                            display: none
 
             &__dropdown-toggle
                 background: none
@@ -299,6 +312,9 @@
                 .input
                     border-top-right-radius: 0
                     border-bottom-right-radius: 0
+
+                    padding: 14px 16px
+                    border-right: none
 
             &__btn
 
