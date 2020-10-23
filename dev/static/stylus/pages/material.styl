@@ -115,5 +115,80 @@
       margin: 0 auto 32px
 
 
+  .siblings
+    display: flex
+    justify-content: space-between
+    margin-bottom: 24px
+
+    @media $desktop
+      margin-bottom: 32px
+
+    &__prev, &__next
+      display: flex
+      align-items: center
+      cursor: pointer
+
+      font-size: 14px
+      color: $gray2
+
+      @media $desktop
+        align-items: flex-start
+
+      &:hover
+        color: $blue
+
+      &::after
+        content: ''
+        display: block
+        flex-shrink: 0
+        width: 36px
+        height: 36px
+        background-size: cover
+
+        @media $tablet
+          padding-top: 16px
+
+
+
+    &__next
+      text-align: right
+
+      &::after
+        background-image: url('../img/svg/material-next.svg')
+        margin-left: 8px
+
+    &__prev
+      flex-direction: row-reverse
+
+      &::after
+        background-image: url('../img/svg/material-prev.svg')
+        margin-right: 8px
+
+    &__name
+      display: none
+      font-size: 17px
+      line-height: 20px
+      font-weight: 600
+      margin-top: 8px
+
+      @media $desktop
+        display: block
+
+      @media $desktop_big
+        font-size: 15px
+
+  &__back
+    padding-bottom: 24px
+    border-bottom: 1px solid $gray4
+    margin-bottom: 64px
+
+    font-size: 16px
+    font-weight: 600
+    text-align: center
+    color: $gray2
+
+    @media $desktop
+      border-bottom: none
+      margin-bottom: 24px
 
 
