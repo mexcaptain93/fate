@@ -6,6 +6,7 @@ $(document).ready(function () {
     footer();
     privacyBtn();
     changeArticle();
+    similarSlider();
 });
 
 
@@ -255,5 +256,42 @@ function changeArticle() {
                 img.attr('src', 'http://fatecenter.mexcaptain.ru/upload/iblock/e3e/e3e9bde7c80144b9955de62c906c8856.jpg')
             }
         }, 200)
+    });
+}
+
+function similarSlider() {
+    var similarSlider = new Swiper('.js-similar .swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        freeMode: true,
+        loop: true,
+        breakpoints: {
+            768: {
+                freeMode: false,
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            },
+            1024: {
+                freeMode: false,
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: false,
+            }
+        },
+
+    });
+
+    $('.js-similar-slider-prev').on('click', function (e) {
+        e.preventDefault();
+        similarSlider.slidePrev();
+    });
+
+    $('.js-similar-slider-next').on('click', function (e) {
+        e.preventDefault();
+        similarSlider.slideNext();
     });
 }

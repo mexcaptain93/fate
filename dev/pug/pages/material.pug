@@ -51,30 +51,40 @@ block content
 			//.material__rate
 			//	span тут по месту заверстаем
 			//
-			//.material__similar.similar
-			//	.similar__heading
-			//		span Похожие статьи
-			//	.similar__slider
-			//		.swiper-container
-			//			.swiper-wrapper
-			//				.swiper-slide
-			//					a(href='material.html')
-			//						.similar__img
-			//							img(src='static/img/content/article-new-0.jpg' alt='')
-			//						.similar__name
-			//							span Психология подросткового возраста
-			//				.swiper-slide
-			//					a(href='material.html')
-			//						.similar__img
-			//							img(src='static/img/content/article-new-1jpg' alt='')
-			//						.similar__name
-			//							span Психология подросткового возраста
-			//				.swiper-slide
-			//					a(href='material.html')
-			//						.similar__img
-			//							img(src='static/img/content/article-new-2.jpg' alt='')
-			//						.similar__name
-			//							span Психология подросткового возраста
+			.material__similar.similar
+				.similar__heading
+					span Похожие статьи
+					.similar__arrows
+						.similar__prev.js-similar-slider-prev
+						.similar__next.js-similar-slider-next
+				.similar__slider.js-similar
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide
+								.similar__article
+									a(href='material.html')
+										.similar__img-wrap
+											.similar__img
+												img(src='static/img/content/article-new-0.jpg' alt='')
+										.similar__name
+											span Психология подросткового возраста
+							.swiper-slide
+								.similar__article
+									a(href='material.html')
+										.similar__img-wrap
+											.similar__img
+												img(src='static/img/content/article-new-1.jpg' alt='')
+										.similar__name
+											span Психология подросткового возраста
+							.swiper-slide
+								.similar__article
+									a(href='material.html')
+										.similar__img-wrap
+											.similar__img
+												img(src='static/img/content/article-new-2.jpg' alt='')
+										.similar__name
+											span Психология подросткового возраста
+						.swiper-pagination
 			//
 			//
 			//

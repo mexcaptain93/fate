@@ -770,4 +770,115 @@
             background-repeat: no-repeat
             cursor: pointer
 
+.similar
+    padding-top: 24px
+    border-top: 1px solid $gray4
+    padding-bottom: 68px
+    border-bottom: 1px solid $gray4
+    margin-bottom: 24px
+
+    @media $tablet
+        padding-bottom: 86px
+
+    @media $desktop
+        padding-bottom: 48px
+        margin-bottom: 16px
+
+    &__slider
+        margin-left: -20px
+        margin-right: -20px
+
+        @media $tablet
+            margin-left: auto
+            margin-right: auto
+
+    &__heading
+        margin-bottom: 24px
+        position: relative
+
+        font-family: $RobotoSlab
+        font-size: 24px
+        text-align: center
+        
+        @media $tablet
+            margin-bottom: 32px
+
+            text-align: left
+
+    &__arrows
+        position: absolute
+        display: none
+        top: 50%
+        transform: translateY(-50%)
+        right: 0
+        z-index: 2
+
+        @media $desktop
+            display: flex
+
+
+    &__prev
+        width: 6px
+        height: 10px
+        padding: 9px 12px
+        background-image: url('../img/svg/slider-prev.svg')
+        background-position: center center
+        background-repeat: no-repeat
+        cursor: pointer
+
+    &__next
+        width: 6px
+        height: 10px
+        padding: 9px 12px
+        background-image: url('../img/svg/slider-next.svg')
+        background-position: center center
+        background-repeat: no-repeat
+        cursor: pointer
+
+    &__article
+        width: 256px
+        padding: 0 20px
+
+        @media $tablet
+            padding: 0
+            width: auto
+
+    &__img-wrap
+        padding-bottom: 55.55%
+        height: 0
+        width: 100%
+        position: relative
+        margin-bottom: 8px
+
+    &__img
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    &__name
+        font-size: 15px
+        line-height: 24px
+        font-family: $RobotoSlab
+
+    .swiper-slide
+        width: auto
+
+    .swiper-pagination
+        bottom: 0
+        padding-top: 40px
+        display: none
+
+        @media $tablet
+            display: block
+
+        @media $desktop
+            display: none
+
 
