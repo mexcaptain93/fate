@@ -231,31 +231,38 @@ function changeArticle() {
 
 
         var article = $(this).parents('.article'),
-            img = article.find('.article__img img'),
-            name = article.find('.article__name span'),
+            img = article.find('.article__img-wrap a'),
+            name = article.find('.article__name a'),
             category = article.find('.article__category span'),
             descr = article.find('.article__descr span'),
             views = article.find('.article__views span'),
             rating = article.find('.article__name span'),
-            link = name.parents('a').attr('href');
+            link = article.find('a'),
+            id = $(this).attr('data-id'),
+            changer_btn = $(this);
 
         article.css({'opacity':0});
 
+        $.ajax({
+            type: "POST",
+            url: "ajax/changeArticle.php?id=" + id,
+            data: "id="+id,
+            success: function(msg){
+                var data = jQuery.parseJSON(msg);
 
-
-        setTimeout(function () {
-            if (true) {
-                name.html('Тест функции замены');
-                category.html('Тест функции замены');
-                views.html('666');
-                rating.html('4.5');
-                link = 'http://mexcaptain.ru';
-                descr.html('Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела?');
-                article.css({'opacity':1});
-
-                img.attr('src', 'http://fatecenter.mexcaptain.ru/upload/iblock/e3e/e3e9bde7c80144b9955de62c906c8856.jpg')
+                if (data) {
+                    name.html('<span>' + data.name + '</span>');
+                    category.html(data.category);
+                    views.html(data.views);
+                    rating.html(data.rating);
+                    link.attr('href', data.url);
+                    descr.html(data.descr);
+                    article.css({'opacity':1});
+                    img.html('<img src="' + data.picture + '" alt="' + data.name + '">');
+                    changer_btn.attr('data-id', data.id_change);
+                }
             }
-        }, 200)
+        });
     });
 }
 
