@@ -245,7 +245,7 @@ function changeArticle() {
 
         $.ajax({
             type: "POST",
-            url: "ajax/changeArticle.php?id=" + id,
+            url: "/ajax/changeArticle.php?id=" + id,
             data: "id="+id,
             success: function(msg){
                 var data = jQuery.parseJSON(msg);
