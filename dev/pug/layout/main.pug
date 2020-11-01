@@ -26,6 +26,18 @@ html(lang="ru-RU")
 			.content
 				block content
 			include ../modules/footer
+
+		.popup.popup_mail.js-popup-mail
+			.popup__wrap
+				.popup__heading.like-h3
+					span Отправить на почту
+				form.popup__form
+					.popup__input
+						input.input(type="text" name="email")
+					.popup__btns
+						button.btn.js-popup-mail-send Отправить
+						button.btn.btn_white.js-popup-mail-close Прочту на сайте
+
 		script(src="static/js/jquery.js")
 		script(src="static/js/libs.min.js")
 		script(src="https://unpkg.com/swiper/swiper-bundle.min.js")

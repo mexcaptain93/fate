@@ -7,6 +7,7 @@ $(document).ready(function () {
     privacyBtn();
     changeArticle();
     similarSlider();
+    sendMail();
 });
 
 
@@ -156,21 +157,21 @@ function articlesSlider() {
 
             }
         });
-            var indexRubricSlider = new Swiper('.js-index-rubric-slider .swiper-container', {
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    type: 'bullets',
+        var indexRubricSlider = new Swiper('.js-index-rubric-slider .swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+
                 },
-                breakpoints: {
-                    768: {
-                        slidesPerView: 2,
-                        spaceBetween: 30
 
-                    },
-
-                }
-            });
+            }
+        });
     }
 
     if ($('.js-side-rubric-slider').length) {
@@ -300,5 +301,60 @@ function similarSlider() {
     $('.js-similar-slider-next').on('click', function (e) {
         e.preventDefault();
         similarSlider.slideNext();
+    });
+}
+
+function sendMail() {
+    var link = '';
+
+    $('.article__mail').on('click', function (e) {
+        e.preventDefault();
+        $('.js-popup-mail').show();
+
+        link = $(this).parents('.article').find('.article__name a').attr('href');
+    });
+
+    $('.js-popup-mail-close').on('click', function (e) {
+        e.preventDefault();
+        $('.js-popup-mail').hide();
+    });
+
+    $('.js-popup-mail').on('click', function (e) {
+        e.preventDefault();
+
+        if (e.target === this) {
+            $('.js-popup-mail').hide();
+        }
+    });
+
+    $('.js-popup-mail-send').on('click', function (e) {
+        e.preventDefault();
+
+        mail = $('.js-popup-mail .input').val();
+
+        $.ajax({
+            type: "POST",
+            url: "/ajax/sendMail.php?",
+            data: "link="+link+"&mail="+mail,
+            success: function(msg){
+
+                if (msg != "Ошибка!") {
+                    $('.js-popup-mail-send').html('Отправлено!').attr('disabled', true);
+                    $('.js-popup-mail .input').val('').hide();
+                    $('.js-popup-mail-close').hide();
+
+
+                    setTimeout(function(){
+                        $('.js-popup-mail').hide();
+                        $('.js-popup-mail-send').html('Отправить!').attr('disabled', false);
+                        $('.js-popup-mail-close').show();
+                        $('.js-popup-mail .input').show();
+
+                    }, 2000);
+                }
+
+            }
+        });
+
     });
 }
