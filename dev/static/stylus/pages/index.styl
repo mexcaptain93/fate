@@ -188,8 +188,11 @@
     .article
 
       @media $tablet
-        padding-left: 50%
+        padding-left: 346px
         position: relative
+
+      @media $desktop
+        padding-left: 50%
 
       &__img
 
@@ -197,9 +200,12 @@
           position: absolute
           top: 0
           left: 0
-          width: calc(50% - 16px)
+          width: 330px
           overflow: hidden
-          max-height: 160px
+          //max-height: 160px
+
+        @media $desktop
+          width: calc(50% - 16px)
 
         &.opened
 
@@ -223,9 +229,13 @@
           margin-bottom: 1px
 
       &__descr
+        height: auto
 
         @media $tablet
-          height: 110px
+          height: 140px
+
+        @media $desktop_big
+          height: 200px
 
         &.opened
 
@@ -236,7 +246,7 @@
 
         @media $tablet
           height: 54px
-          top: -33px
+          top: -15px
           margin-bottom: -33px
 
           &::before
